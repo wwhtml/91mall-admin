@@ -1,0 +1,44 @@
+@import './element-ui';
+//如果mixins.scss，已经在vite.config.ts文件中自动化引入设置，那么这里就可以不用引入了；
+@import './mixins.scss';
+
+html body,
+#app {
+  position: relative;
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0;
+  overflow: auto;
+  font-family: 'PingFang SC', Arial, 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  // color: var(--el-color-black);
+  background: #f6f8f9;
+  -webkit-font-smoothing: antialiased;
+  @include base-scrollbar;
+
+  div {
+    @include base-scrollbar;
+  }
+}
+
+ul,
+h1,
+h3,
+h4,
+p,
+dl,
+dd {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  outline: none;
+}
